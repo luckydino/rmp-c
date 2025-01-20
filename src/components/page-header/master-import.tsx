@@ -237,7 +237,7 @@ export const MasterImport = (props: {
                             variant="solid"
                             mr="1"
                             onClick={() => handleChange(param)}
-                            isDisabled={selectedParam.id === 'null' && param === ''}
+                            isDisabled={false}
                         >
                             {t('apply')}
                         </Button>

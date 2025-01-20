@@ -129,7 +129,7 @@ export default function AppRoot() {
                         </Alert>
                     )}
 
-                    <Alert status="info" variant="solid" size="xs" pl={3} pr={1} py={1} zIndex="1">
+                    <Alert status="info" variant="solid" size="xs" pl={3} pr={1} py={1} zIndex="1" id="tip_msg">
                         <AlertIcon />
                         <Text>
                             <Text fontWeight="bold" color={'red'}>
@@ -163,7 +163,7 @@ export default function AppRoot() {
                                     ml="auto"
                                     textDecoration="underline"
                                     fontWeight="normal"
-                                    onClick={() => setIsShowRMTMessage(false)}
+                                    onClick={() => document.getElementById('tip_msg')?.remove()}
                                 >
                                     {t('close')}
                                 </Link>

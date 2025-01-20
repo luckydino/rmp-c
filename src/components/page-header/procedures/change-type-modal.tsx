@@ -379,7 +379,7 @@ export const ChangeTypeModal = (props: {
                         {t('cancel')}
                     </Button>
                     <Tooltip label={t('header.settings.pro')} isOpen={true}>
-                        <Button colorScheme="red" mr="1" onClick={handleChange} isDisabled={true}>
+                        <Button colorScheme="red" mr="1" onClick={handleChange} isDisabled={false}>
                             {t('apply')}
                         </Button>
                     </Tooltip>
