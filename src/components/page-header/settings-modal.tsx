@@ -79,9 +79,9 @@ const SettingsModal = (props: { isOpen: boolean; onClose: () => void }) => {
         dispatch(setTelemetryProject(allowTelemetry));
     };
 
-    const maximumParallelLines = activeSubscriptions.RMP_CLOUD ? MAX_PARALLEL_LINES_PRO : MAX_PARALLEL_LINES_FREE;
-    const isParallelLineDisabled = parallelLinesCount >= maximumParallelLines;
-    const isRandomStationNamesDisabled = !activeSubscriptions.RMP_CLOUD;
+    // const maximumParallelLines = MAX_PARALLEL_LINES_PRO;
+    const isParallelLineDisabled = false;
+    const isRandomStationNamesDisabled = false;
 
     const handleRandomStationNamesChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         dispatch(setRandomStationsNames(event.target.value as 'none' | StationCity));

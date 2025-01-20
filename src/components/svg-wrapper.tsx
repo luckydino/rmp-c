@@ -58,9 +58,9 @@ const SvgWrapper = () => {
     const size = useWindowSize();
     const { height, width } = getCanvasSize(size);
 
-    const isMasterDisabled = !activeSubscriptions.RMP_CLOUD && masterNodesCount + 1 > MAX_MASTER_NODE_FREE;
-    const isParallelDisabled = !activeSubscriptions.RMP_CLOUD && parallelLinesCount + 1 > MAX_PARALLEL_LINES_FREE;
-    const isRandomStationNamesDisabled = !activeSubscriptions.RMP_CLOUD || randomStationsNames === 'none';
+    const isMasterDisabled = false;
+    const isParallelDisabled = false;
+    const isRandomStationNamesDisabled = false;
 
     // Find nodes existence on each update and load fonts if needed.
     React.useEffect(() => {

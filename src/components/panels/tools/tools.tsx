@@ -96,7 +96,7 @@ const ToolsPanel = () => {
     const handleLine = (type: LinePathType) => dispatch(setMode(`line-${type}`));
     const handleMiscNode = (type: MiscNodeType) => dispatch(setMode(`misc-node-${type}`));
 
-    const isMasterDisabled = !activeSubscriptions.RMP_CLOUD && masterNodesCount + 1 > MAX_MASTER_NODE_FREE;
+    const isMasterDisabled = false;
 
     return (
         <Flex

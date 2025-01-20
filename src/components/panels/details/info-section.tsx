@@ -83,9 +83,7 @@ export default function InfoSection() {
         if (graph.current.hasEdge(selectedFirst)) {
             const attr = graph.current.getEdgeAttributes(selectedFirst);
             const parallelIndex = attr.parallelIndex;
-            const maximumParallelLines = activeSubscriptions.RMP_CLOUD
-                ? MAX_PARALLEL_LINES_PRO
-                : MAX_PARALLEL_LINES_FREE;
+            const maximumParallelLines = MAX_PARALLEL_LINES_PRO;
             const isParallelSwitchDisabled = parallelLinesCount > maximumParallelLines && parallelIndex < 0;
             const isParallelInputDisabled = parallelLinesCount > maximumParallelLines && parallelIndex >= 0;
             fields.push({
