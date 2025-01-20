@@ -129,6 +129,48 @@ export default function AppRoot() {
                         </Alert>
                     )}
 
+                    <Alert status="info" variant="solid" size="xs" pl={3} pr={1} py={1} zIndex="1">
+                        <AlertIcon />
+                        <Text>
+                            <Text fontWeight="bold" color={'red'}>
+                                根据
+                                <Link
+                                    href="https://github.com/railmapgen/rmp/blob/main/LICENCE"
+                                    target="_blank"
+                                    textDecoration="underline"
+                                >
+                                    GPL3.0
+                                </Link>
+                                开源协议, 本软件原仓库为:
+                                <Link
+                                    href="https://github.com/railmapgen/rmp"
+                                    target="_blank"
+                                    textDecoration="underline"
+                                >
+                                    https://github.com/railmapgen/rmp
+                                </Link>
+                                , 修改后的源码在
+                                <Link
+                                    href="https://github.com/luckydino/rmp-c"
+                                    target="_blank"
+                                    textDecoration="underline"
+                                >
+                                    https://github.com/luckydino/rmp-c
+                                </Link>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <Link
+                                    as="button"
+                                    ml="auto"
+                                    textDecoration="underline"
+                                    fontWeight="normal"
+                                    onClick={() => setIsShowRMTMessage(false)}
+                                >
+                                    {t('close')}
+                                </Link>
+                            </Text>
+                        </Text>
+                    </Alert>
+
                     <RmgErrorBoundary allowReset>
                         <Flex direction="row" height="100%" overflow="hidden" sx={{ position: 'relative' }}>
                             {/* `position: 'relative'` is used to make sure RmgSidePanel in DetailsPanel
